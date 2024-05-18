@@ -1,0 +1,97 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Set a background image and make sure it covers the entire page */
+    background-image: url('https://th.bing.com/th/id/R.ca81b6ad8f6a8f633e1477785b896eda?rik=lXR5pWqKKUJqpA&riu=http%3a%2f%2fstatic.vecteezy.com%2fsystem%2fresources%2fpreviews%2f000%2f095%2f779%2foriginal%2fvector-travel-background.jpg&ehk=BAbZeIzY%2fvQIMNDtBZYpWqPMqL%2bzV6Z6HoZtk4V%2bYCI%3d&risl=&pid=ImgRaw&r=0');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: rgba(255, 251, 251, 0.85); /* Semi-transparent background */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 350px;
+    /* Animation for the form container */
+    animation: slide-in 1s ease-out forwards;
+}
+
+h2 {
+    text-align: center;
+    color: #333 ;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="aadhar"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline:auto;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #6658f6;
+    /* Transform for a subtle pop effect */
+    transform: scale(1.03);
+}
+
+label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+input:valid + label,
+input:focus + label {
+    top: -10px;
+    background: white;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #6658f6;
+}
+
+.btn {
+    width: 100%;
+    background: #6658f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #5648c9;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
